@@ -1,14 +1,17 @@
 import Image from "next/image";
 import Menu from "./Menu";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <section>
       <nav className="navbar navbar-expand-lg navbar-light bg-light bg-white pt-lg-40 pb-lg-40 pt-30 pb-50">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            <Image src="/icon/logo.svg" width={60} height={60} />
-          </a>
+          <Link href="/">
+            <a className="navbar-brand">
+              <Image src="/icon/logo.svg" width={60} height={60} />
+            </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,13 +32,14 @@ export default function Navbar() {
               <Menu title="Global Rank" href="/" />
 
               <li className="nav-item my-auto">
-                <a
-                  className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
-                  href="./src/sign-in.html"
-                  role="button"
-                >
-                  Sign In
-                </a>
+                <Link href="/signIn">
+                  <a
+                    className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+                    role="button"
+                  >
+                    Sign In
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
