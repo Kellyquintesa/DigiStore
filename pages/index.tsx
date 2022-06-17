@@ -23,8 +23,7 @@ const Home: NextPage = () => {
         <title>DigiStore - Get a New Experience in Gaming</title>
         <meta
           name="description"
-          content="We provide millions of ways to help
-players become true winners"
+          content="We provide millions of ways to help players become true winners"
         />
         <link rel="shortcut icon" href="/icon/logo.png" />
       </Head>
@@ -51,13 +50,11 @@ players become true winners"
             className="d-flex flex-row flex-lg-wrap overflow-setting justify-content-lg-between gap-lg-3 gap-4"
             data-aos="fade-up"
           >
-            <Link href="Super-Mechs">
-              <Featured
-                photo="Thumbnail-1"
-                title="Super Mechs"
-                category="Mobile"
-              />
-            </Link>
+            <Featured
+              photo="Thumbnail-1"
+              title="Super Mechs"
+              category="Mobile"
+            />
             <Featured
               photo="Thumbnail-2"
               title=" Call of Duty: Modern"
@@ -70,7 +67,7 @@ players become true winners"
             />
             <Featured
               photo="Thumbnail-4"
-              title=" Clash of Clans"
+              title="Clash of Clans"
               category="Mobile"
             />
             <Featured photo="Thumbnail-5" title="Valorant" category="Desktop" />

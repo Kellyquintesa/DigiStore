@@ -2,8 +2,11 @@ import Navbar from "../../components/organisms/Navbar";
 import Footer from "../../components/organisms/Footer";
 import TopupForm from "../../components/organisms/TopupForm";
 import TopupItem from "../../components/organisms/TopupItem";
+import { useRouter } from "next/router";
 
 function Detail() {
+  const router = useRouter();
+
   return (
     <>
       <Navbar />
@@ -21,11 +24,21 @@ function Detail() {
           <div className="row">
             <div className="col-xl-3 col-lg-4 col-md-5 pb-30 pb-md-0 pe-md-25 text-md-start">
               {/* mobile */}
-              <TopupItem type="mobile" />
+              <TopupItem
+                title={router.query.title}
+                photo={router.query.photo}
+                category={router.query.category}
+                type="mobile"
+              />
             </div>
             <div className="col-xl-9 col-lg-8 col-md-7 ps-md-25">
               {/* Desktop: Game title  */}
-              <TopupItem type="desktop" />
+              <TopupItem
+                type="desktop"
+                title={router.query.title}
+                photo={router.query.photo}
+                category={router.query.category}
+              />
               <hr />
               <form action="/checkout">
                 <div className="pt-md-50 pt-30">

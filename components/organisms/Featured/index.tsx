@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface FeaturedItems {
   title: string;
@@ -14,8 +15,17 @@ interface FeaturedItems {
 function Featured(props: Partial<FeaturedItems>) {
   const { title, category, photo } = props;
   return (
-    <div className="featured-game-card position-relative">
-      <a href="/detail">
+    <Link
+      href={{
+        pathname: "/detail",
+        query: {
+          title: title,
+          photo: photo,
+          category: category,
+        },
+      }}
+    >
+      <div className="featured-game-card position-relative">
         <div className="blur-sharp">
           <Image
             src={`/img/${photo}.png`}
@@ -46,8 +56,8 @@ function Featured(props: Partial<FeaturedItems>) {
             </div>
           </div>
         </div>
-      </a>
-    </div>
+      </div>
+    </Link>
   );
 }
 

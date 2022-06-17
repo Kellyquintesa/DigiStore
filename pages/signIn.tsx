@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SignInForm from "../components/organisms/SignInForm";
 
 function signIn() {

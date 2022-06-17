@@ -6,7 +6,7 @@ function signUp() {
       <div className="container mx-auto">
         <form action="">
           <div className="pb-50">
-            <a className="navbar-brand" href="../index.html">
+            <a className="navbar-brand" href="/">
               <Image src="/icon/logo.svg" width={60} height={60} />
             </a>
           </div>

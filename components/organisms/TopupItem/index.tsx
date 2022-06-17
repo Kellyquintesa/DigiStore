@@ -1,5 +1,8 @@
 interface TopupItemProps {
   type: "desktop" | "mobile";
+  title: string | string[] | undefined;
+  photo: string | string[] | undefined;
+  category: string | string[] | undefined;
 }
 
 function TopupItem(props: TopupItemProps) {
@@ -8,10 +11,11 @@ function TopupItem(props: TopupItemProps) {
     return (
       <div className="pb-50 d-md-block d-none">
         <h2 className="text-4xl fw-bold color-palette-1 text-start mb-10 mt-10">
-          Mobile Legends: <br />
-          The New Battle 2021
+          {props?.title}
         </h2>
-        <p className="text-lg color-palette-2 mb-0">Category: Mobile</p>
+        <p className="text-lg color-palette-2 mb-0">
+          Category: {props?.category}
+        </p>
       </div>
     );
   }
@@ -19,7 +23,7 @@ function TopupItem(props: TopupItemProps) {
     <div className="row align-items-center">
       <div className="col-md-12 col-4">
         <img
-          src="/img/Thumbnail-3.png"
+          src={`/img/${props.photo}.png`}
           width="280"
           height="380"
           className="img-fluid"
@@ -30,12 +34,10 @@ function TopupItem(props: TopupItemProps) {
       {/*  Mobile: Game title  */}
       <div className="col-md-12 col-8 d-md-none d-block">
         <h2 className="text-xl fw-bold color-palette-1 text-start mb-10">
-          Mobile Legends:
-          <br />
-          The New Battle 2021
+          {props?.title}
         </h2>
         <p className="text-sm color-palette-2 text-start mb-0">
-          Category: Mobile
+          Category: {props?.category}
         </p>
       </div>
     </div>
