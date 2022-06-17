@@ -15,7 +15,7 @@ function Featured(props: Partial<FeaturedItems>) {
   const { title, category, photo } = props;
   return (
     <div className="featured-game-card position-relative">
-      <a href="./src/detail.html">
+      <a href="/detail">
         <div className="blur-sharp">
           <Image
             src={`/img/${photo}.png`}

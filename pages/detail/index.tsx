@@ -3,7 +3,7 @@ import Footer from "../../components/organisms/Footer";
 import TopupForm from "../../components/organisms/TopupForm";
 import TopupItem from "../../components/organisms/TopupItem";
 
-function index() {
+function Detail() {
   return (
     <>
       <Navbar />
@@ -15,7 +15,7 @@ function index() {
               Top Up
             </h2>
             <p className="text-lg color-palette-1 mb-0">
-              Perkuat akun dan jadilah pemenang
+              Strengthen your account and become a winner
             </p>
           </div>
           <div className="row">
@@ -27,7 +27,7 @@ function index() {
               {/* Desktop: Game title  */}
               <TopupItem type="desktop" />
               <hr />
-              <form action="./checkout.html">
+              <form action="/checkout">
                 <div className="pt-md-50 pt-30">
                   <div className="">
                     <label
@@ -48,7 +48,7 @@ function index() {
                 </div>
                 <TopupForm />
                 <a
-                  href="./checkout.html"
+                  href="/checkout"
                   type="submit"
                   className="btn btn-submit rounded-pill fw-medium text-white border-0 text-lg"
                 >
@@ -64,4 +64,4 @@ function index() {
   );
 }
 
-export default index;
+export default Detail;

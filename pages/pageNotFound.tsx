@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 function pageNotFound() {
   return (
     <section className="not-found mx-auto pt-145 pb-md-212 pb-100">
@@ -333,15 +334,15 @@ function pageNotFound() {
             Oops! Not Found
           </h2>
           <p className="text-lg text-center color-palette-1 m-0">
-            Halaman yang anda kunjungi sudah
+            We can't seem to find the
             <br className="d-sm-block d-none" />
-            tidak tersedia pada sistem kami dan menghubungi
+            page you're looking for.
           </p>
         </div>
         <div className="button-group d-flex flex-column mx-auto">
           <a
             className="btn btn-homepage fw-medium text-lg text-white rounded-pill"
-            href="#"
+            href="/"
             role="button"
           >
             Homepage

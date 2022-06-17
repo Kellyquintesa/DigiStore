@@ -9,6 +9,8 @@ import Steps from "../components/organisms/Steps";
 import Featured from "../components/organisms/Featured";
 import Reached from "../components/organisms/Reached";
 import Footer from "../components/organisms/Footer";
+import Link from "next/link";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -17,6 +19,15 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>DigiStore - Get a New Experience in Gaming</title>
+        <meta
+          name="description"
+          content="We provide millions of ways to help
+players become true winners"
+        />
+        <link rel="shortcut icon" href="/icon/logo.png" />
+      </Head>
       <Navbar />
       <MainBanner />
 
@@ -40,11 +51,13 @@ const Home: NextPage = () => {
             className="d-flex flex-row flex-lg-wrap overflow-setting justify-content-lg-between gap-lg-3 gap-4"
             data-aos="fade-up"
           >
-            <Featured
-              photo="Thumbnail-1"
-              title="Super Mechs"
-              category="Mobile"
-            />
+            <Link href="Super-Mechs">
+              <Featured
+                photo="Thumbnail-1"
+                title="Super Mechs"
+                category="Mobile"
+              />
+            </Link>
             <Featured
               photo="Thumbnail-2"
               title=" Call of Duty: Modern"
@@ -97,7 +110,7 @@ const Home: NextPage = () => {
                 <div className="d-md-block d-flex flex-column w-100">
                   <a
                     className="btn btn-read text-lg rounded-pill"
-                    href="#"
+                    href="/pageNotFound"
                     role="button"
                   >
                     Read Story

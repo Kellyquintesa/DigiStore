@@ -28,7 +28,7 @@ function MainBanner() {
               </a>
               <a
                 className="btn-learn text-lg color-palette-1 my-auto text-center"
-                href="#"
+                href="/pageNotFound"
                 role="button"
               >
                 Learn More
